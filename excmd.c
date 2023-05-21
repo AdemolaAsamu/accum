@@ -5,7 +5,7 @@
   * @progname: name of program
   * Return: returns -1 on failure
   */
-int execute_command(char __attribute__((unused)) *command, char *progname)
+int execute_command(char *command, char *progname)
 {
 	char *args[8];
 	char *token;
