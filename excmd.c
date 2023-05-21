@@ -12,13 +12,13 @@ int execute_command(char __attribute__((unused)) *command, char *progname)
 	int i, pid;
 	int status, exit_status;
 
-	token = strtok(command, " \n");
+	token = strtok(command, " \n\t");
 	i = 0;
 	while (token != NULL && i < 8)
 	{
 		token[strcspn(token, "\n")] = '\0';
 		args[i] = token;
-		token = strtok(NULL, " \n");
+		token = strtok(NULL, " \n\t");
 		i++;
 	}
 	args[i] = NULL;
